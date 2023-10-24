@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+#wrapper { padding: 0;} 	
+body { font-family: Tahoma, Arial, sans-serif; 
+	   color: #FFFFFF;
+	   margin: 0;
+	   background-image: url(spacebackground.jpg);
+	   background-repeat: no-repeat;
+	   background-size: 100% 100%;
+	   background-color: #000000;
+}
+h1 { text-align: center;
+	 line-height: 150%;
+}
+h2 { text-align: center; }
+a { text-decoration: none; }
+a:link { color: #FEF6C2; }
+a:visited { color: #D2B48C; }
+a:hover { color: #CC9933; }
+table { margin: auto;
+		border-spacing: 0;
+		width: 50%;
+}
+td { padding: 10px; 
+	 text-align: center;
+}
+th { padding: 10px; }
+tr:nth-child(3n+1) { background-color: #371885; }
+tr:nth-child(3n+2) { background-color: #4b22b2; }
+tr:nth-child(3n) { background-color: #5a1fef; }
+header { background-image: url(logo.png);
+	     width: 305px;
+		 height: 189px;
+		 margin: auto;
+		 padding-top: 15px;
+		 padding-bottom: 15px;
+		 background-repeat: no-repeat;
+}
+nav { text-align: center;
+	  vertical-align: middle;
+	  font-size: 2.25em;
+}
+nav ul { display: flex;
+	     flex-direction: column;
+		 margin: 0;
+	     padding: 0;
+		 list-style-type: none;
+}
+nav li { padding: .5em 1em;
+		 border: 1px solid red;
+		 background-color: #180f20;
+}
+nav a:link { color: #b50e0e; }
+nav a:visited { color: #610000; }
+nav a:hover { color: #ff0000; }
+main { display: block;
+       border: 1px solid red;
+	   font-size: 1em;
+	   line-height: 150%;   
+       padding:2em 2em 2em 2em; 
+	   margin: 1em;
+}
+main h1 { font-size: 3em; }
+footer { background-color: #000000;
+         font-size: .60em;
+		 font-style: italic;
+		 text-align: center;
+		 padding-bottom: 1em;
+		 border-top: 2px solid red;
+}
+@media (min-width: 600px) { 
+	nav ul { flex-flow: row nowrap;	
+			 justify-content: center;
+	}
+}
+@media (min-width: 1024px) { 
+		@supports (display: grid) {
+		   header { grid-area: header; }	
+		   nav { grid-area: nav; }
+		   main { grid-area: main; }		
+		   footer { grid-area: footer; }
+		   #wrapper { display: grid;
+		              grid-template-areas:
+				         "header header" 
+						 "nav    main" 
+						 "footer footer"; 
+		   grid-template-columns: 150px 1fr;
+           grid-template-rows: 200px auto 50px;
+		   grid-gap: 2em;
+		   gap: 2em;
+	       }
+	       nav ul { flex-direction: column; }
+		   nav li { padding: .5em 0; }
+		   h2 { text-align: left; }
+        }  
+}				
