@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gamesborough Feedback Form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="gamesborough.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+  <header title="Gamesborough Logo">
+  </header>
+  <nav>
+    <ul>
+	  <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li> 
+      <li><a href="articles.html">Articles</a></li>
+	  <li><a href="feedback.html">Feedback</a></li>
+	</ul>
+  </nav>
+  <main>
+    <h1>Leave Your Feedback Here</h1>  
+	<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+		<label for="pageName">What page are you giving feedback for?<br> <select size="1" name="pageName" id="pageName" required>
+			<option disabled selected value>Select an Option</option>
+			<option>Home</option>
+			<option>About</option>
+			<option>Article List</option>
+			<option>Nowhere</option>
+			<option>Songs About Leaving</option>
+			<option>Angel Dust</option>
+			<option>The Site Itself</option>
+	    </select></label>
+	    <div id="radioContainer">Type of Feedback:<br>
+			<label for="bugFix">
+				<input type="radio" name="feedbackType" id="bugFix" value="bug" required>Bug Fix<br> 
+			</label>	
+			<label for="accessibilityIssue">
+				<input type="radio" name="feedbackType" id="accessibilityIssue" value="accessibility" required>Accessibility Issue<br> 
+			</label>	
+			<label for="contentIssue">
+				<input type="radio" name="feedbackType" id="contentIssue" value="content" required>Content Issue<br>
+			</label>	
+			<label for="other">
+				<input type="radio" name="feedbackType" id="other" value="other" required>Other<br> 
+			</label>
+        </div>			
+		<label for="myInfo">Additional Info:<br> <textarea name="myInfo" id="myInfo" cols="20" rows="5" required></textarea></label>
+		<button type="submit">Submit<br>Feedback</button>
+	</form>
+  </main>
+  <footer>   
+	Copyright &copy; 2023 Gamesborough<br>
+	<a href="mailto:lw00116@my.westga.edu">lw00116@my.westga.edu</a>
+  </footer>
+</div>
+</body>
+</html>

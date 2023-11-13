@@ -12,6 +12,7 @@ h1 { text-align: center;
 	 line-height: 150%;
 }
 h2 { text-align: center; }
+p { margin-bottom: 35px; }
 a { text-decoration: none; }
 a:link { color: #FEF6C2; }
 a:visited { color: #D2B48C; }
@@ -67,11 +68,52 @@ footer { background-color: #000000;
 		 padding-bottom: 1em;
 		 border-top: 2px solid red;
 }
+form { display: flex;
+       padding-left: 1em;
+       flex-direction: column;
+	   border: 1px solid red;
+	   background-color: #04041b;
+}
+label[for="pageName"] { text-align: center; 
+						margin-bottom: 1em;
+}
+#radioContainer { padding-left: 2em;
+				  margin-bottom: 1em;
+				  margin-right: 20px;
+				  padding-top: 1em;
+				  font-size: 1.25em;
+}
+label[for="myInfo"] { text-align: center; }
+textarea { margin-bottom: 1em; 
+		   width: 80%;
+}
+button { width: 30%;
+		 margin-left: auto;
+		 margin-right: auto;
+		 margin-bottom: .5em;
+}
 @media (min-width: 600px) { 
 	nav ul { flex-flow: row nowrap;	
 			 justify-content: center;
 	}
-}
+	nav li { padding: .5em 0.35em; }
+    label[for="pageName"] { grid-area: a; 
+	                        padding-top: 3em;
+	}
+    #radioContainer { grid-area: b; }	
+    label[for="myInfo"] { grid-area: c; }
+	button { grid-area: d; }
+	form { display: grid;
+	       grid-template-areas:
+				            "a b" 
+						    "c c" 
+						    "d d"; 
+		   grid-gap: 1em;
+		   gap: 1em;
+	}
+	label[for="pageName"] { padding-left: 2em; }
+    textarea { width: 55%; }	
+}    
 @media (min-width: 1024px) { 
 		@supports (display: grid) {
 		   header { grid-area: header; }	
@@ -91,5 +133,8 @@ footer { background-color: #000000;
 	       nav ul { flex-direction: column; }
 		   nav li { padding: .5em 0; }
 		   h2 { text-align: left; }
+		   button { width: 10em; }
+           textarea { width: 40%; }	
+
         }  
 }				
