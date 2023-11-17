@@ -48,8 +48,10 @@ nav ul { display: flex;
 }
 nav li { padding: .5em 1em;
 		 border: 1px solid red;
-		 background-color: #180f20;
+		 background-color: #04041b;
+		 transition: background-color 1s linear;
 }
+nav li:hover { background-color: #1b1b21; }
 nav a:link { color: #b50e0e; }
 nav a:visited { color: #610000; }
 nav a:hover { color: #ff0000; }
@@ -62,7 +64,7 @@ main { display: block;
 }
 main h1 { font-size: 3em; }
 footer { background-color: #000000;
-         font-size: .60em;
+         font-size: .80em;
 		 font-style: italic;
 		 text-align: center;
 		 padding-bottom: 1em;
