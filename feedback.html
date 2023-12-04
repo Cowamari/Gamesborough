@@ -32,7 +32,8 @@
 			<option>Angel Dust</option>
 			<option>The Site Itself</option>
 	    </select></label>
-	    <div id="radioContainer">Type of Feedback:<br>
+	    <fieldset id="radioContainer">
+		<legend>Type of Feedback:</legend>
 			<label for="bugFix">
 				<input type="radio" name="feedbackType" id="bugFix" value="bug" required>Bug Fix<br> 
 			</label>	
@@ -45,7 +46,7 @@
 			<label for="other">
 				<input type="radio" name="feedbackType" id="other" value="other" required>Other<br> 
 			</label>
-        </div>			
+        </fieldset>			
 		<label for="myInfo">Additional Info:<br> <textarea name="myInfo" id="myInfo" cols="20" rows="5" required></textarea></label>
 		<button type="submit">Submit<br>Feedback</button>
 	</form>

@@ -52,8 +52,8 @@ nav li { padding: .5em 1em;
 		 transition: background-color 1s linear;
 }
 nav li:hover { background-color: #1b1b21; }
-nav a:link { color: #b50e0e; }
-nav a:visited { color: #610000; }
+nav a:link { color: #d60000; }
+nav a:visited { color: #700202; }
 nav a:hover { color: #ff0000; }
 main { display: block;
        border: 1px solid red;
@@ -85,6 +85,8 @@ label[for="pageName"] { text-align: center;
 				  padding-top: 1em;
 				  font-size: 1.25em;
 }
+fieldset { border: 0; }
+legend { padding-top: 1em; } 
 label[for="myInfo"] { text-align: center; }
 textarea { margin-bottom: 1em; 
 		   width: 80%;
